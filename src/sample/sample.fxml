@@ -3,8 +3,26 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ListView?>
+<HBox fx:controller="sample.Controller"
+      xmlns:fx="http://javafx.com/fxml">
 
-    
-</GridPane>
+    <ListView fx:id="idContacts" HBox.hgrow="NEVER" onMouseClicked="#OnCkicedList"/>
+
+    <VBox>
+        <TextArea text="" fx:id="idTextMessage" VBox.vgrow="ALWAYS"/>
+
+        <HBox>
+            <TextField text=" " HBox.hgrow="ALWAYS" fx:id="idSendText" onAction="#onActionMouseSend"/>
+            <Button fx:id="idButtonSend" text="->" onAction="#onActionMouseSend"/>
+        </HBox>
+
+    </VBox>
+
+</HBox>
